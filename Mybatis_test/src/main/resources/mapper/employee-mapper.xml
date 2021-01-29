@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.db.mapper.EmployeeMapper">
+	<select id="selectAllEmployee" resultType="com.db.dto.EmployeeDto">
+		select * from employee
+	</select>
+	<insert id="insertEmployee" parameterType="com.db.dto.EmployeeDto">
+		insert into employee values(#{eno},#{name},#{department},#{position})
+	</insert>
+	<update id="updateEmployee" parameterType="com.db.dto.EmployeeDto">
+		update employee set name = #{name}, department = #{department}, position=#{position} where eno like #{eno}
+	</update>
+	<delete id="deleteEmployee" parameterType="String">
+		delete from employee where eno like #{eno}
+	</delete>
+</mapper>
