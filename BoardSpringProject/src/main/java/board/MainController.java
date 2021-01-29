@@ -54,7 +54,7 @@ public class MainController {
 
 	@RequestMapping("logout.do")
 	public String logout(HttpSession session) {
-		session.removeAttribute("dto");
+		session.invalidate();;
 		return "main";
 	}
 }
