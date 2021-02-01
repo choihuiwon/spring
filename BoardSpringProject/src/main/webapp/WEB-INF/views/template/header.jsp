@@ -54,15 +54,15 @@
 		<li><a href="qnaView.do">문의하기</a>
 		<li><a href="boardListView.do">게시판</a>
 <c:choose>
-<c:when test="${sessionScope.dto eq null }">
-		<li><a href="login.do">로그인</a></li>
-		<li><a href="member/register.jsp">회원가입</a></li>
+<c:when test="${sessionScope.login ne null && sessionScope.login eq true}">
+		<c:if test="${sessionScope.id eq 'admin' }">
+			<li><a href="adminManageMemberView.do">회원관리</a></li>
+		</c:if>
+		<li id="status"><img id="grade_img" src="img/grade_icon/${sessionScope.grade_name }.png">${sessionScope.name }님 로그인 하셨습니다.<br><a href="logout.do" id="logout">로그아웃</a> | <a href="memberUpdateView.do" id="update">정보수정</a></li>
 </c:when>
 <c:otherwise>
-		<c:if test="${sessionScope.dto.id eq 'admin' }">
-			<li><a href="adminManageMember.do">회원관리</a></li>
-		</c:if>
-		<li id="status"><img id="grade_img" src="img/grade_icon/${sessionScope.dto.grade }.png">${sessionScope.dto.name }님 로그인 하셨습니다.<br><a href="logout.do" id="logout">로그아웃</a> | <a href="update_view.do" id="update">정보수정</a></li>
+		<li><a href="login.do">로그인</a></li>
+		<li><a href="member/register.jsp">회원가입</a></li>
 </c:otherwise>
 </c:choose>
 	</ul>		

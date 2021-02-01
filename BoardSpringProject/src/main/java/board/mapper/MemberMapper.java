@@ -11,4 +11,8 @@ public interface MemberMapper {
 
 	MemberDTO login(HashMap<String, Object> map);
 
+	MemberDTO selectMember(String id);
+
+	int memberUpdateAction(HashMap<String, Object> map);
+
 }
