@@ -15,4 +15,6 @@ public interface MemberMapper {
 
 	int memberUpdateAction(HashMap<String, Object> map);
 
+	int insertLog(HashMap<String, Object> map);
+
 }

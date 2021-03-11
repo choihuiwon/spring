@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="board.mapper.CommentMapper">
+	<insert id="insertComment" parameterType="board.dto.CommentDto">
+		insert into board_comment(cno, bno, content, writer) values(cno_seq.nextval,#{bno},#{content},#{writer})
+	</insert>
+	<update id="commentLikeHate" parameterType="map">
+		<choose>
+			<when test="mode.equals('blike')">
+				update board_comment set blike = blike + 1 where cno = #{cno}
+ 			</when>
+ 			<otherwise>
+				update board_comment set bhate = bhate + 1 where cno = #{cno}
+ 			</otherwise>
+		</choose>
+	</update>
+	<select id="getCommentListSortLike" parameterType="int" resultType="board.dto.CommentDto">
+		select * from board_comment where bno = #{bno} order by blike desc
+	</select>
+	<select id="getCommentListSortHate" parameterType="int" resultType="board.dto.CommentDto">
+		select * from board_comment where bno = #{bno} order by bhate desc
+	</select>
+</mapper>

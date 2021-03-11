@@ -12,14 +12,6 @@ public class BoardDto {
 	private int comment_count;
 	
 	
-	// 게시글 등록용
-	public BoardDto(String title, String writer, String content) {
-		super();
-		this.title = title;
-		this.writer = writer;
-		this.content = content;
-	}
-	
 	// 게시글 목록 조회용
 	public BoardDto(int bno, String title, String bdate, int bcount, String writer, String content, int blike,
 			int bhate, int comment_count) {
@@ -48,10 +40,20 @@ public class BoardDto {
 		this.blike = blike;
 		this.bhate = bhate;
 	}
-
+	
+	// 게시글 등록용
+	public BoardDto(int bno, String title, String writer, String content) {
+		super();
+		this.bno = bno;
+		this.title = title;
+		this.writer = writer;
+		this.content = content;
+	}
+	
 	public int getBno() {
 		return bno;
 	}
+
 
 	public void setBno(int bno) {
 		this.bno = bno;

@@ -15,10 +15,21 @@ public class CommentDto {
 		this.content = content;
 		this.writer = writer;
 	}
+
 	public CommentDto(int cno, int bno, String content, String cdate, String writer, int blike, int bhate) {
 		super();
 		this.cno = cno;
 		this.bno = bno;
+		this.content = content;
+		this.cdate = cdate;
+		this.writer = writer;
+		this.blike = blike;
+		this.bhate = bhate;
+	}
+	// 댓글 목록 조회때문에 생성함 2021-02-02
+	public CommentDto(int cno, String content, String cdate, String writer, int blike, int bhate) {
+		super();
+		this.cno = cno;
 		this.content = content;
 		this.cdate = cdate;
 		this.writer = writer;

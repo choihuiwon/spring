@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="board.mapper.QnAMapper">
+	<select id="selectQnAList" parameterType="map" resultType="board.dto.QnADto">
+		<choose>
+			<when test="id.equals('admin')">
+				select qno, title, content, wdate, writer, status, response from (select ceil(rownum / 5) as page, qno, title, content, wdate, writer, status, response from (select * from qna order by qno DESC)) where page = #{pageNo}
+			</when>
+			<otherwise>
+				select qno, title, content, wdate, writer, status, response from (select ceil(rownum / 5) as page, qno, title, content, wdate, writer, status, response from (select * from qna where writer = #{id} order by qno desc)) where page = #{pageNo}
+			</otherwise>
+		</choose>
+	</select>
+	<update id="responseQnA" parameterType="map">
+ 		update qna set response = #{res}, status = 2 where qno = #{qno}
+ 	</update>
+ 	<update id="readQnA" parameterType="int">
+ 		update qna set status = 1 where qno = #{qno}
+ 	</update>
+ 	<insert id="sendQnA" parameterType="board.dto.QnADto">
+ 		insert into qna (qno, title, content, wdate, writer) values(qno_seq.nextval, #{title}, #{content}, sysdate, #{writer})
+ 	</insert>
+ 	
+</mapper>

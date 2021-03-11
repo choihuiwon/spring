@@ -94,6 +94,13 @@ public class AdminManageController {
 			JSONArray array = new JSONArray(list);
 			JSONObject obj = new JSONObject();
 			obj.put("result", array);
+			if(list.size()>0) {
+				obj.put("responseCode", 200);
+				obj.put("responseMessage", "Search Success");
+			}else {
+				obj.put("responseCode", 500);
+				obj.put("responseMessage", "Search Fail");
+			}
 			response.getWriter().write(obj.toString());
 		} catch (IOException e) {
 			e.printStackTrace();

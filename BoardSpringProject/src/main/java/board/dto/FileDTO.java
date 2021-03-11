@@ -24,6 +24,9 @@ public class FileDTO {
 		case "gif":
 			type="image";
 			break;
+		case "mp4":
+			type="video";
+			break;
 		default:
 			type="normal";
 		}
@@ -41,6 +44,9 @@ public class FileDTO {
 		case "jpg":
 		case "gif":
 			type="image";
+			break;
+		case "mp4":
+			type="video";
 			break;
 		default:
 			type="normal";

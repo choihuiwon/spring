@@ -38,5 +38,13 @@ public class MemberService {
 		map.put("age", age);
 		return mapper.memberUpdateAction(map);
 	}
+
+	public int insertLog(String log_date, int code_number, String message) {
+		HashMap<String, Object> map = new HashMap<String, Object>();
+		map.put("log_date", log_date);
+		map.put("code_number", code_number);
+		map.put("message", message);
+		return mapper.insertLog(map);
+	}
 	
 }

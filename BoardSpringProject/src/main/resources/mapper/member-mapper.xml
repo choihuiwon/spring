@@ -12,4 +12,7 @@
 	<update id="memberUpdateAction" parameterType="map">
 		update member set passwd = #{pass}, name = #{name}, age = #{age} where id like #{id}
 	</update>
+	<insert id="insertLog" parameterType="map">
+		insert into memberlog values(to_date(#{log_date},'YYYY/MM/DD HH24:MI:SS'), #{code_number}, #{message})
+	</insert>
 </mapper>
