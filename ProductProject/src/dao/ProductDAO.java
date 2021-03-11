@@ -54,7 +54,7 @@ public class ProductDAO {
 		return list;
 	}
 	
-	// 상품 검색
+	// 상품 검색 
 	public ProductDTO selectProduct(String product_no) {
 		ProductDTO dto = null;
 		String sql = "select * from product where product_no like ?";

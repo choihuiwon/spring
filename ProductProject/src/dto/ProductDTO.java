@@ -15,7 +15,7 @@ public class ProductDTO {
 		this.ea = ea;
 		this.maker = maker;
 	}
-	
+	 
 	public String getProduct_no() {
 		return product_no;
 	}

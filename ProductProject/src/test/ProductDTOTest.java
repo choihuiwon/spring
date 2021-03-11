@@ -61,7 +61,7 @@ class ProductDTOTest {
 		if(dto == null)
 			fail("오류, 해당 데이터는 있는데 검색결과가 없습니다. SQL문을 확인해보세요.");
 	}
-	
+	 
 	@AfterAll
 	public static void end() {
 		try {
