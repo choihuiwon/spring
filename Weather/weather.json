@@ -1,0 +1,118 @@
+{
+	"response": {
+		"header": {
+			"resultCode": "00",
+			"resultMsg": "NORMAL_SERVICE"
+		},
+		"body": {
+			"dataType": "JSON",
+			"items": {
+				"item": [
+					{
+						"baseDate": "20210209",
+						"baseTime": "0200",
+						"category": "POP",
+						"fcstDate": "20210209",
+						"fcstTime": "0600",
+						"fcstValue": "0",
+						"nx": 57,
+						"ny": 127
+					},
+					{
+						"baseDate": "20210209",
+						"baseTime": "0200",
+						"category": "PTY",
+						"fcstDate": "20210209",
+						"fcstTime": "0600",
+						"fcstValue": "0",
+						"nx": 57,
+						"ny": 127
+					},
+					{
+						"baseDate": "20210209",
+						"baseTime": "0200",
+						"category": "R06",
+						"fcstDate": "20210209",
+						"fcstTime": "0600",
+						"fcstValue": "0",
+						"nx": 57,
+						"ny": 127
+					},
+					{
+						"baseDate": "20210209",
+						"baseTime": "0200",
+						"category": "REH",
+						"fcstDate": "20210209",
+						"fcstTime": "0600",
+						"fcstValue": "55",
+						"nx": 57,
+						"ny": 127
+					},
+					{
+						"baseDate": "20210209",
+						"baseTime": "0200",
+						"category": "S06",
+						"fcstDate": "20210209",
+						"fcstTime": "0600",
+						"fcstValue": "0",
+						"nx": 57,
+						"ny": 127
+					},
+					{
+						"baseDate": "20210209",
+						"baseTime": "0200",
+						"category": "SKY",
+						"fcstDate": "20210209",
+						"fcstTime": "0600",
+						"fcstValue": "1",
+						"nx": 57,
+						"ny": 127
+					},
+					{
+						"baseDate": "20210209",
+						"baseTime": "0200",
+						"category": "T3H",
+						"fcstDate": "20210209",
+						"fcstTime": "0600",
+						"fcstValue": "-6",
+						"nx": 57,
+						"ny": 127
+					},
+					{
+						"baseDate": "20210209",
+						"baseTime": "0200",
+						"category": "TMN",
+						"fcstDate": "20210209",
+						"fcstTime": "0600",
+						"fcstValue": "-6.0",
+						"nx": 57,
+						"ny": 127
+					},
+					{
+						"baseDate": "20210209",
+						"baseTime": "0200",
+						"category": "UUU",
+						"fcstDate": "20210209",
+						"fcstTime": "0600",
+						"fcstValue": "1",
+						"nx": 57,
+						"ny": 127
+					},
+					{
+						"baseDate": "20210209",
+						"baseTime": "0200",
+						"category": "VEC",
+						"fcstDate": "20210209",
+						"fcstTime": "0600",
+						"fcstValue": "302",
+						"nx": 57,
+						"ny": 127
+					}
+				]
+			},
+			"pageNo": 1,
+			"numOfRows": 10,
+			"totalCount": 155
+		}
+	}
+}

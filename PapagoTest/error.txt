@@ -1,0 +1,1 @@
+2021/02/08 11:38:52	400	N2MT05	source and target must be different (source와 target이 동일합니다.)

@@ -1,0 +1,2 @@
+2021/02/10 02:39:17	400	SE01	Incorrect query request (잘못된 쿼리요청입니다.)
+2021/02/10 02:40:42	400	SE01	Incorrect query request (잘못된 쿼리요청입니다.)
